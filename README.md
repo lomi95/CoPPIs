@@ -19,16 +19,16 @@ devtools::install_github("lomi95/CoPPIs")
 ```
 
 ## 🚀 Usage
-Read your data, it must have 
+Read your data
 ```r
 dataset <- openxlsx::read.xlsx("yourDataTable.xslx")
 nog <- c("Group_1", "Group_2", "Group_3") # GroupN
 genes_id <- dataset$GeneColumn
 ```
-Make sure that in colnames(dataset) are present "Group_1", "Group_2", "Group_N"
-and that genes_id has the same length of your dataset rows.
+Make sure that in `colnames(dataset)` are present "Group_1", "Group_2", "Group_N"
+and that `genes_id` has the same length of your dataset rows.
 
-Open Cytoscape if you want to have your results in it, otherwise in your parameters add Cytoscape = F
+Open Cytoscape if you want to have your results in it, otherwise in your parameters add `Cytoscape = F`
 ```r
 CoPPI_results <- CoPPIs_pipeline(dataset = dataset,
                                    names_of_groups = nog,
